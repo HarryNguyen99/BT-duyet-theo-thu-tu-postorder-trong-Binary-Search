@@ -14,9 +14,8 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     @Override
     public boolean insert(E e) {
         if (root == null)
-            root = createNewNode(e); /*tạo một root mới*/
+            root = createNewNode(e);
         else {
-            /*xác định vị trí nút cha*/
             TreeNode<E> parent = null;
             TreeNode<E> current = root;
             while (current != null) {
@@ -27,7 +26,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
                     parent = current;
                     current = current.right;
                 } else
-                    return false; /*Nút trùng lặp không được chèn*/
+                    return false;
             }
             if (e.compareTo(parent.element) < 0)
                 parent.left = createNewNode(e);
@@ -35,7 +34,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
                 parent.right = createNewNode(e);
         }
         size++;
-        return true; /*phần tử được chèn thành công*/
+        return true;
     }
 
     protected TreeNode<E> createNewNode(E e) {

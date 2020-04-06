@@ -1,7 +1,7 @@
 public class TestBST {
 
     public static void main(String[] args) {
-        //tạo một BST
+
         BST<String> tree = new BST<>();
         tree.insert("45");
         tree.insert("34");
@@ -10,7 +10,7 @@ public class TestBST {
         tree.insert("59");
         tree.insert("23");
         tree.insert("48");
-        //cây ngang
+
         System.out.println("Inorder (đã sắp xếp): ");
         tree.inorder();
         System.out.println("postorder (đã sắp xếp): ");
